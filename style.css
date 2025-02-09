@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.canvas-container {
+    position: relative; /* Ensures child elements (search and selector) are positioned relative to this */
+    width: 100vw;
+    height: 100vh;
+    background: transparent !important;
+}
+
+
+.search {
+    --padding: 14px;
+
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Centers horizontally */
+    z-index: 10; /* Ensures it's above the canvas */
+    width: max-content;
+    display : flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f6f6f6;
+
+    margin: 0 !important;
+    border: none;
+
+    transition: box-shadow 0.25;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 2px rgba(0,0,0, 0.75);
+}
+
+.search-input {
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333; /* dark gray */
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 300px;
+}
+
+
+
+.search-input::placeholder, .search-icon {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.selector {
+    --padding: 10px;
+
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    left: 20px; /* Positions on the left */
+    z-index: 10; /* Ensures it's above the canvas */
+
+    width: max-content;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f6f6f6;
+    gap: 10px; /* Adjust spacing between icons */
+}

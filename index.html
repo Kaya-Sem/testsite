@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+
+
+<body>
+    <script type="module" src="/main.js"></script>
+
+    <div class="canvas-container">
+        <!-- Search bar (floating on top) -->
+        <form>
+            <div class="search">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input type="search" class="search-input searchbar" placeholder="Search" name="searchterm" size="15"
+                    maxlength="15" />
+            </div>
+        </form>
+
+        <!-- Selector (floating on top) -->
+        <div class="selector">
+            <span class="material-symbols-outlined">counter_2</span>
+            <span class="material-symbols-outlined">counter_1</span>
+            <span class="material-symbols-outlined">counter_0</span>
+        </div>
+
+        <!-- Canvas (Three.js will render here) -->
+        <canvas id="three-canvas"></canvas>
+    </div>
+</body>
+
+
+</html>
