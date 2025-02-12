@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow: hidden;
+    background: transparent; !important
 }
 
 .canvas-container {
@@ -10,44 +11,69 @@ body {
     background: transparent !important;
 }
 
+.verdiep_selector_button {
+    border-radius: 28px;
+    height: 50px;
+    width: 50px;
+    outline: none;
+    border: none;
+    transition: background 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.verdiep_selector_button.active {
+    background: #333333; /* Groene kleur wanneer actief */
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
 
 .search {
-    --padding: 14px;
+    --padding: 10px;
 
     position: absolute;
-    top: 20px; /* Adjust as needed */
+    top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Centers horizontally */
-    z-index: 10; /* Ensures it's above the canvas */
+    transform: translateX(-50%);
+    z-index: 10;
     width: max-content;
-    display : flex;
+    display: flex;
     align-items: center;
     padding: var(--padding);
     border-radius: 28px;
     background: #f6f6f6;
-
     margin: 0 !important;
     border: none;
 
-    transition: box-shadow 0.25;
+    transition: width 0.2s ease-in-out, box-shadow 0.2s;
+    width: 150px; /* Startbreedte */
 }
 
 .search:focus-within {
-    box-shadow: 0 0 2px rgba(0,0,0, 0.75);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+    width: 300px; /* Breedte bij focus */
 }
 
+.search:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+
+
 .search-input {
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Lexend', sans-serif;
     color: #333333; /* dark gray */
     margin-left: var(--padding);
     outline: none;
     border: none;
     background: transparent;
-    width: 300px;
+    width: 80px;
 }
 
-
+.search-input:focus-within {
+    width: 200px;
+}
 
 .search-input::placeholder, .search-icon {
     color: rgba(0, 0, 0, 0.5);
@@ -74,7 +100,7 @@ form {
     flex-direction: column; /* Align items vertically */
     align-items: center; /* Center items horizontally */
     padding: var(--padding);
-    border-radius: 28px;
+    border-radius: 32px;
     background: #f6f6f6;
-    gap: 10px; /* Adjust spacing between icons */
+    gap: 15px; /* Adjust spacing between icons */
 }

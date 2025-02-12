@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 
@@ -20,6 +23,9 @@
 
     <div class="canvas-container">
         <!-- Search bar (floating on top) -->
+
+
+        <h1> currently selected </h1>
         <form>
             <div class="search">
                 <span class="search-icon material-symbols-outlined">search</span>
@@ -30,9 +36,10 @@
 
         <!-- Selector (floating on top) -->
         <div class="selector">
-            <span class="material-symbols-outlined">counter_2</span>
-            <span class="material-symbols-outlined">counter_1</span>
-            <span class="material-symbols-outlined">counter_0</span>
+            <button type="button" class="verdiep_selector_button" data-floor="2"> 2 </button>
+            <button type="button" class="verdiep_selector_button" data-floor="1"> 1 </button>
+            <button type="button" class="verdiep_selector_button" data-floor="0"> 0 </button>
+            <button type="button" class="verdiep_selector_button" data-floor="-1"> -1 </button>
         </div>
 
         <!-- Canvas (Three.js will render here) -->
