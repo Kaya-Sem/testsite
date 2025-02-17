@@ -6,6 +6,7 @@ class modelState {
     currentFloor = 0;
     minFloor = -1;
     maxFloor = 2;
+    // add a list of lecture hall names and places, used as search pool for search bar
 }
 
 const globalModelState = new modelState();
@@ -75,13 +76,13 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff);
 const camera = new THREE.PerspectiveCamera(
     75,
-    window.innerWidth / window.innerHeight,
+    globalThis.innerWidth / globalThis.innerHeight,
     0.1,
     1000,
 );
 
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(globalThis.innerWidth, globalThis.innerHeight);
 renderer.localClippingEnabled = true; // Enable global clipping
 
 document.querySelector(".canvas-container").appendChild(renderer.domElement);
@@ -144,8 +145,8 @@ function animate() {
 renderer.setAnimationLoop(animate);
 
 // Handle Window Resizing
-window.addEventListener("resize", () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
+globalThis.addEventListener("resize", () => {
+    renderer.setSize(globalThis.innerWidth, globalThis.innerHeight);
+    camera.aspect = globalThis.innerWidth / globalThis.innerHeight;
     camera.updateProjectionMatrix();
 });

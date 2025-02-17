@@ -1,7 +1,7 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: transparent; !important
+    background: transparent !important;
 }
 
 .canvas-container {
@@ -84,16 +84,13 @@ form {
     padding: 0;
 }
 
-
-
-
 .selector {
     --padding: 10px;
 
     position: absolute;
-    top: 100px; /* Adjust as needed */
-    left: 20px; /* Positions on the left */
-    z-index: 10; /* Ensures it's above the canvas */
+    top: 100px;
+    left: 20px;
+    z-index: 10;
 
     width: max-content;
     display: flex;
@@ -102,5 +99,5 @@ form {
     padding: var(--padding);
     border-radius: 32px;
     background: #f6f6f6;
-    gap: 15px; /* Adjust spacing between icons */
+    gap: 15px;
 }
