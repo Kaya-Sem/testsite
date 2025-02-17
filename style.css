@@ -21,7 +21,7 @@ body {
 }
 
 .verdiep_selector_button.active {
-    background: #333333; /* Groene kleur wanneer actief */
+    background: #404040; /* Groene kleur wanneer actief */
     color: white;
     font-weight: bold;
     transform: scale(1.1);
